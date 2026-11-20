@@ -1,0 +1,117 @@
+:root {
+    color: #212529;
+    font: 1rem/1.5 system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    padding: 1.5rem clamp(1rem, 3vw, 3rem);
+}
+
+h1 {
+    margin: 1rem 0 1.5rem;
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.home {
+    color: #0a58ca;
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-block: 1.5rem;
+}
+
+.sections a {
+    border-radius: .5rem;
+    background: #0d6efd;
+    color: white;
+    padding: .55rem 1rem;
+    font-size: 1.125rem;
+    text-decoration: none;
+}
+
+.sections a:hover {
+    background: #0b5ed7;
+}
+
+.map-variable {
+    max-width: 25rem;
+    margin-block: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+select {
+    appearance: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: .4rem 2rem .4rem .75rem;
+    border: 1px solid #868e96;
+    border-radius: .375rem;
+    background:
+        linear-gradient(45deg, transparent 50%, #495057 50%) right 17px center / 5px 5px no-repeat,
+        linear-gradient(135deg, #495057 50%, transparent 50%) right 12px center / 5px 5px no-repeat,
+        white;
+    color: inherit;
+    font: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid #0a58ca;
+    outline-offset: 3px;
+}
+
+.comparison:not([hidden]) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.map-panel select {
+    max-width: 16rem;
+}
+
+.map-result {
+    margin-top: .75rem;
+}
+
+.map-result img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+}
+
+.map-result p {
+    padding: 1rem;
+    background: #f1f3f5;
+    border-radius: .375rem;
+}
+
+.notice {
+    margin: 1.5rem 0;
+    border: 1px solid #9ec5fe;
+    border-radius: .375rem;
+    background: #cfe2ff;
+    color: #052c65;
+    padding: .9rem 1rem;
+    text-align: center;
+}
+
+@media (max-width: 44rem) {
+    .comparison:not([hidden]) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
